@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Cálculo de Presupuesto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/988/988118.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    
+        <main class="container mt-3">
+            <div class="text-center m-5">
+                <h1 id="date" class="roboto-medium text-dark"></h1>
+
+                <h2 id="current" class="roboto-bold p-4 text-dark">0.00</h2>
+
+                <div id="ingresos-lbl" class="row justify-content-center" > 
+                    <p class="roboto-medium col-12 col-sm-6 col-md-2 p-2 bg-dark text-white rounded-start">INGRESOS:</p>
+                    <p id="ingresoTotal" class="roboto-regular col-12 col-sm-6 col-md-2 p-2 bg-dark text-white rounded-end"><b>0.00</b></p>
+                </div>
+
+                <div id="egresos-lbl" class="row justify-content-center">
+                    <p class="roboto-medium col-12 col-sm-6 col-md-2 p-2 rounded-start lbl-border-left text-secondary"><b>EGRESOS:</b></p>
+                    <p id="egresoTotal" class="roboto-regular col-12 col-sm-6 col-md-2 p-2 rounded-end lbl-border-right text-secondary"><b>0.00</b></p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <p class="roboto-medium col-12 col-sm-6 col-md-2 p-1 text-secondary"><b>Porcentaje de gastos:</b></p>
+                    <p id="porcenGastos" class="roboto-regular col-12 col-sm-6 col-md-1 p-1 bg-dark text-white rounded"><b>0.00%</b></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <section id="transaction-div" class="col-12 col-sm-5 col-md-5">
+                    <div class="d-flex row g-2 justify-content-center align-items-center">
+                        <h2 class="roboto-medium col-6 col-sm-8 col-md-4">Transacción</h2>
+                        <div class="w-100"></div>
+                        <select name="type" id="type-trans" class="text-secondary col-6 col-sm-8 col-md-4 p-2 border-2border-dark-subtle rounded bg-light">
+                            <option value="" disabled selected hidden>Ingreso | Egreso</option>
+                            <option value="ingreso">Ingreso</option>
+                            <option value="egreso">Egreso</option>
+                        </select>
+                        
+                        <div class="w-100"></div>
+
+                        <input type="text" name="descripcion" id="desc-input" placeholder="Descripción" class="text-secondary roboto-medium col-6 col-sm-8 col-md-4 p-2 border-2 border-dark-subtle rounded">
+
+                        <div class="w-100"></div>
+
+                        <input type="number" name="monto" id="monto-input" placeholder="Monto" class="text-secondary roboto-medium col-6 col-sm-8 col-md-4 p-2 border-dark-subtle rounded">
+
+                        <div class="w-100"></div>
+
+                        <button id="addBtn" class="roboto-light col-4 col-sm-6 col-md-3 bg-dark text-white rounded border-0 p-1"><b>Agregar</b></button>
+                    </div>
+                </section>
+            
+                <section id="details-div" class="col-12 col-sm-5 col-md-6">
+                    <button id="ingresoBtn" class="btn roboto-medium col-6 col-sm-5 btn-outline-secondary btn-dark-hover p-2">Ingresos</button>
+                    <button id="egresoBtn" class="btn roboto-medium col-6 col-sm-5 btn-outline-secondary p-2">Egresos</button>
+                    <div id="details-display">
+                        
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <script src="js/script.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </body>
+</html>
