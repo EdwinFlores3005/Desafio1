@@ -49,18 +49,6 @@ border-bottom: 2px solid rgb(33, 37, 41);
 border-right: 2px solid rgb(33, 37, 41);
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
-
-input[type=number] {
-    -moz-appearance:textfield; /* Firefox */
-    appearance: number;
-}
-
 input:focus{
   outline: none;
 }
@@ -75,4 +63,17 @@ ul{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* Este CSS es para eliminar las flechas del input de number*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield; 
+    appearance: number;
 }

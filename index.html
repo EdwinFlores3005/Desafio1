@@ -19,12 +19,12 @@
 
                 <h2 id="current" class="roboto-bold p-4 text-dark">0.00</h2>
 
-                <div id="ingresos-lbl" class="row justify-content-center" > 
+                <div id="ingresos-lbl" class="row justify-content-center" > <!-- Se muestran los ingresos totales-->
                     <p class="roboto-medium col-12 col-sm-6 col-md-2 p-2 bg-dark text-white rounded-start">INGRESOS:</p>
                     <p id="ingresoTotal" class="roboto-regular col-12 col-sm-6 col-md-2 p-2 bg-dark text-white rounded-end"><b>0.00</b></p>
                 </div>
 
-                <div id="egresos-lbl" class="row justify-content-center">
+                <div id="egresos-lbl" class="row justify-content-center"> <!-- Se muestran los egresos totales-->
                     <p class="roboto-medium col-12 col-sm-6 col-md-2 p-2 rounded-start lbl-border-left text-secondary"><b>EGRESOS:</b></p>
                     <p id="egresoTotal" class="roboto-regular col-12 col-sm-6 col-md-2 p-2 rounded-end lbl-border-right text-secondary"><b>0.00</b></p>
                 </div>
@@ -36,7 +36,7 @@
             </div>
 
             <div class="row">
-                <section id="transaction-div" class="col-12 col-sm-5 col-md-5">
+                <section id="transaction-div" class="col-12 col-sm-5 col-md-5"> <!-- Esta seccion correspone a los inputs a rellenar para crear un objeto de transaccion-->
                     <div class="d-flex row g-2 justify-content-center align-items-center">
                         <h2 class="roboto-medium col-6 col-sm-8 col-md-4">Transacción</h2>
                         <div class="w-100"></div>
@@ -60,6 +60,7 @@
                     </div>
                 </section>
             
+                <!-- En esta seccion se muestran las listas de ingresos y egresos despues de presionar el boton para cada lista-->
                 <section id="details-div" class="col-12 col-sm-5 col-md-6 text-center">
                     <button id="ingresoBtn" class="btn roboto-medium col-6 col-sm-5 btn-dark btn-dark-hover p-2">Ingresos</button>
                     <button id="egresoBtn" class="btn roboto-medium col-6 col-sm-5 btn-outline-secondary p-2">Egresos</button>
