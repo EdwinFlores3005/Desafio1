@@ -43,8 +43,12 @@ function ShowList(arrayList){
     for(let i = 0; i < arrayList.length; i++)
     {
         const ulist = document.createElement("li")
+        ulist.classList.add("d-flex", "justify-content-between", "align-items-center", "p-2", "m-2", "border", "border-2", "w-75", "rounded")
 
-        ulist.textContent = `${arrayList[i].monto}, ${arrayList[i].tipo}, ${arrayList[i].descripcion}`
+        ulist.innerHTML = `
+        <p class="roboto-medium m-0">${arrayList[i].descripcion}</p>
+        <p class="roboto-medium m-0">+${arrayList[i].monto}</p>
+        `
         list.appendChild(ulist)
         
     }
@@ -125,7 +129,9 @@ ingresoBtn.addEventListener("click", () =>  {
     currentView = "ingreso" 
 
     ingresoBtn.classList.add("btn-dark")
-    egresoBtn.classList.remove("btn-outline-secondary", "btn-dark")
+    ingresoBtn.classList.remove("btn-outline-secondary")
+    egresoBtn.classList.add("btn-outline-secondary")
+    egresoBtn.classList.remove("btn-dark")
 })
 
 egresoBtn.addEventListener("click", () =>{
@@ -134,7 +140,9 @@ egresoBtn.addEventListener("click", () =>{
     currentView = "egreso"
 
     egresoBtn.classList.add("btn-dark")
-    ingresoBtn.classList.remove("btn-outline-secondary", "btn-dark")
+    egresoBtn.classList.remove("btn-outline-secondary")
+    ingresoBtn.classList.add("btn-outline-secondary")
+    ingresoBtn.classList.remove("btn-dark")
 })
 
 //
